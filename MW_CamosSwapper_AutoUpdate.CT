@@ -5,14 +5,14 @@
       <ID>938</ID>
       <Description>"GET OFFSET CAMOS SWAPPER (MAIN MENU WZ)"</Description>
       <Options moHideChildren="1"/>
-      <LastState/>
+      <LastState Activated="1"/>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>[ENABLE]
 {$lua}
 
 
-  local addr,msg = AOBScanModule('A0 ? ? ? ? ? ? ? ? 45 ? 85 F7 7F ? 00 11', process)
-  local addr2,msg = AOBScanModule('90 88 13 94', process)
+  local addr,msg = AOBScanModule('A0 ?? ?? ?? ?? ?? 00 00 ?? ?? ?? ?? F? 7F 00 00 11 00 00 00 00 00 00 00 00 00 01 00 3B 20 00 00', process)
+  local addr2,msg = AOBScanModule('90 88 ?? ?? ?? 0? 00 00 6D F6 22 84 85 01 AD F4', process)
   if addr then
     unregisterSymbol("addr")
     registerSymbol("CamosMWVG", addr, true)
@@ -32,7 +32,7 @@
     <CheatEntry>
       <ID>1031</ID>
       <Description>"----------------------------"</Description>
-      <LastState RealAddress="7FF77A720000"/>
+      <LastState RealAddress="7FF650600000"/>
       <VariableType>String</VariableType>
       <Length>0</Length>
       <Unicode>0</Unicode>
@@ -43,7 +43,7 @@
     <CheatEntry>
       <ID>0</ID>
       <Description>"CAMOS MW"</Description>
-      <LastState RealAddress="161585E63FF"/>
+      <LastState RealAddress="28561B063FF"/>
       <VariableType>String</VariableType>
       <Length>20</Length>
       <Unicode>0</Unicode>
@@ -59,7 +59,7 @@
     <CheatEntry>
       <ID>1</ID>
       <Description>"CAMOS CW"</Description>
-      <LastState RealAddress="1615869EC68"/>
+      <LastState RealAddress="28561BBEC68"/>
       <VariableType>String</VariableType>
       <Length>20</Length>
       <Unicode>0</Unicode>
@@ -76,7 +76,7 @@
     <CheatEntry>
       <ID>2</ID>
       <Description>"CAMOS VG"</Description>
-      <LastState RealAddress="161585E6F3A"/>
+      <LastState RealAddress="28561B06F3A"/>
       <VariableType>String</VariableType>
       <Length>20</Length>
       <Unicode>0</Unicode>
